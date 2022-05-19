@@ -1,39 +1,27 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# ⚡Awesome Widget
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+Custom widgets and components ready to use under your awesome projects!
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## 🎖Installing
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  awesome_widgets: ^<latest_version>
 ```
 
-## Additional information
+## ⚽Widgets
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+🔥```Awesome Snackbar```
+
+-----------------------------------------------------------------------------
+
+
+#### ❤Loved the utility? [Donate here](https://www.paypal.com/paypalme/abhishvekk).
+#### 🚀Want to learn more about Flutter? [Checkout this out!](https://www.youtube.com/channel/UCIxJGxcB4pSrIvuv8FyuqUA)
+#### 💥DM me on Instagram for doubts [Follow here](https://www.instagram.com/abhishvek/)
+
+## 🐛 Bugs/Requests
+
+If you encounter any problems feel free to open an issue. If you feel the library is
+missing a feature, please raise a ticket on Github and I'll look into it.
+Pull request are also welcome.
