@@ -1,3 +1,3 @@
 library awesome_widgets;
 
-export './awesome_widgets.dart';
+export "./src/awesome-snackbar.widget.dart";
