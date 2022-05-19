@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 
 class AwesomeSnackbar {
-  static style1(
-      {required BuildContext context,
-      required Color primaryColor,
-      required String title,
-      subTitle,
-      actionLabel,
-      required TextStyle titleTextstyle,
-      subtitleTextstyle,
-      actionLabelTextstyle,
-      required Function onActionTap,
-      required IconData iconData,
-      required double height,
-      width,
-      iconAvatarRadius,
-      required Color backgrounColor,
-      iconColor}) {
+  static style1({
+    required BuildContext context,
+    required Color primaryColor,
+    required String title,
+    String? subTitle,
+    String? actionLabel,
+    required TextStyle titleTextstyle,
+    TextStyle? subtitleTextstyle,
+    required TextStyle actionLabelTextstyle,
+    Function? onActionTap,
+    required IconData iconData,
+    double? height,
+    double? width,
+    double? iconAvatarRadius,
+    required Color backgroundColor,
+    required Color? iconColor,
+    Duration? duration,
+    DismissDirection? direction,
+  }) {
     return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        duration: duration ?? Duration(seconds: 3),
+        dismissDirection: direction ?? DismissDirection.down,
         behavior: SnackBarBehavior.floating,
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -30,9 +35,11 @@ class AwesomeSnackbar {
                 Container(width: 20, color: primaryColor),
                 const SizedBox(width: 20),
                 CircleAvatar(
-                    radius: iconAvatarRadius,
+                    radius: iconAvatarRadius ?? 20,
                     backgroundColor: primaryColor,
-                    child: Center(child: Icon(iconData, color: iconColor))),
+                    child: Center(
+                        child:
+                            Icon(iconData, color: iconColor ?? Colors.white))),
                 const SizedBox(width: 20),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -40,20 +47,24 @@ class AwesomeSnackbar {
                   children: [
                     Text(title,
                         overflow: TextOverflow.ellipsis, style: titleTextstyle),
-                    Text(subTitle,
-                        overflow: TextOverflow.ellipsis,
-                        style: subtitleTextstyle)
+                    if (subTitle != null)
+                      Text(subTitle,
+                          overflow: TextOverflow.ellipsis,
+                          style: subtitleTextstyle)
                   ],
                 ),
                 const Spacer(),
-                TextButton(
-                    onPressed: onActionTap(),
-                    child: Text(actionLabel, style: actionLabelTextstyle))
+                if (actionLabel != null)
+                  TextButton(
+                      onPressed: () {
+                        onActionTap ?? null;
+                      },
+                      child: Text(actionLabel, style: actionLabelTextstyle))
               ],
             ),
-            height: height,
-            width: width,
-            decoration: BoxDecoration(color: backgrounColor),
+            height: height ?? 70,
+            width: width ?? double.infinity,
+            decoration: BoxDecoration(color: backgroundColor),
           ),
         )));
   }

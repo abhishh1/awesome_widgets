@@ -9,3 +9,7 @@
 ## 0.0.3 - 2022-05-19
 
 * fixed import
+
+## 0.0.4 - 2022-05-19
+
+* changed paramters for snackbar

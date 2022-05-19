@@ -1,4 +1,4 @@
-# ⚡Awesome Widget
+# ⚡Awesome Widgets
 
 Custom widgets and components ready to use under your awesome projects!
 
@@ -11,7 +11,30 @@ dependencies:
 
 ## ⚽Widgets
 
-🔥```Awesome Snackbar```
+## 1. Awesome Snackbar🔥
+
+```
+ActionChip(
+  label: Text("Success snackbar"),
+  onPressed: () {
+    AwesomeSnackbar.style1(
+    subtitleTextstyle: TextStyle(),
+    subTitle: "Congratulations!",
+    context: context,
+    iconColor: Colors.white,
+    width: 80.0,
+    actionLabel: "Okay",
+    actionLabelTextstyle: TextStyle(),
+    iconAvatarRadius: 10.0,
+    primaryColor: Colors.blue,
+    title: "Sucess",
+    titleTextstyle: TextStyle(),
+    onActionTap: () {},
+    iconData: Icons.check,
+    height: 70.0,
+    backgrounColor: Colors.blueGrey);
+}),
+```
 
 -----------------------------------------------------------------------------
 
