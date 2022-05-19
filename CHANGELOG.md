@@ -13,3 +13,7 @@
 ## 0.0.4 - 2022-05-19
 
 * changed paramters for snackbar
+
+## 0.0.5 - 2022-05-19
+
+* added video demo for snackbar
