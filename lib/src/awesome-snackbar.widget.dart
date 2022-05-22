@@ -5,6 +5,7 @@ class AwesomeSnackbar {
     required BuildContext context,
     required Color primaryColor,
     required String title,
+    required Color backgroundColor,
     String? subTitle,
     String? actionLabel,
     TextStyle? titleTextstyle,
@@ -15,7 +16,6 @@ class AwesomeSnackbar {
     double? height,
     double? width,
     double? iconAvatarRadius,
-    required Color backgroundColor,
     Color? iconColor,
     Duration? duration,
     DismissDirection? direction,
@@ -47,11 +47,14 @@ class AwesomeSnackbar {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(title,
-                        overflow: TextOverflow.ellipsis, style: titleTextstyle),
+                        overflow: TextOverflow.ellipsis,
+                        style: titleTextstyle ??
+                            TextStyle(fontSize: 16, color: Colors.white)),
                     if (subTitle != null)
                       Text(subTitle,
                           overflow: TextOverflow.ellipsis,
-                          style: subtitleTextstyle)
+                          style: subtitleTextstyle ??
+                              TextStyle(fontSize: 12, color: Colors.white))
                   ],
                 ),
                 const Spacer(),
@@ -60,7 +63,9 @@ class AwesomeSnackbar {
                       onPressed: () {
                         onActionTap ?? null;
                       },
-                      child: Text(actionLabel, style: actionLabelTextstyle))
+                      child: Text(actionLabel,
+                          style: actionLabelTextstyle ??
+                              TextStyle(fontSize: 10, color: primaryColor)))
               ],
             ),
             height: height ?? 70,
