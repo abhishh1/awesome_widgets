@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AwesomeTextfield {
-  static Widget roundedIconButton({
+  static Widget filled({
     required TextEditingController textEditingController,
     required Color fillColor,
     String? hintText,
