@@ -14,29 +14,42 @@ dependencies:
 ## 1. Awesome Snackbar🔥
 
 ```
-ActionChip(
-  label: Text("Success snackbar"),
-  onPressed: () {
-    AwesomeSnackbar.style1(
-    subtitleTextstyle: TextStyle(),
-    subTitle: "Congratulations!",
-    context: context,
-    iconColor: Colors.white,
-    width: 80.0,
-    actionLabel: "Okay",
-    actionLabelTextstyle: TextStyle(),
-    iconAvatarRadius: 10.0,
-    primaryColor: Colors.blue,
-    title: "Sucess",
-    titleTextstyle: TextStyle(),
-    onActionTap: () {},
-    iconData: Icons.check,
-    height: 70.0,
-    backgrounColor: Colors.blueGrey);
-}),
+AwesomeSnackbar.style1(
+  duration: Duration(seconds: 10),
+  context: context,
+  primaryColor: Colors.blue,
+  title: "Demo snackbar",
+  subTitle: "Demo description",
+  titleTextstyle: TextStyle(color: KConstantColors.bgColor),
+  subtitleTextstyle: TextStyle(color: KConstantColors.bgColor, fontSize: 13),
+  backgroundColor: Colors.white,
+  iconData: Icons.check,
+  iconColor: Colors.white);
+```
+<img width="308" alt="Screenshot 2022-05-23 at 7 31 38 PM" src="https://user-images.githubusercontent.com/52340362/169836849-a1eab3e9-10e9-4b08-a4ac-bdfaca5668fe.png">
+
+
+## 2. Awesome Textfield🔥
+
+```
+ AwesomeTextfield.filled(
+   hintText: "Title",
+   textEditingController: textEditingController,
+   fillColor: Colors.grey,
+),
 ```
 
-https://user-images.githubusercontent.com/52340362/169339914-eb4566db-8a11-48d6-9373-36ec82232fd7.mp4
+<img width="308" alt="Screenshot 2022-05-23 at 7 20 54 PM" src="https://user-images.githubusercontent.com/52340362/169834642-62811fc1-b6ae-4076-a24c-8d535933387e.png">
+
+
+## 3. Awesome Buttons🔥
+```
+AwesomeButton.roundedIconButton(
+   onTap: () { // Do something },
+   title: 'Create')
+),
+```
+<img width="308" alt="Screenshot 2022-05-23 at 7 21 05 PM" src="https://user-images.githubusercontent.com/52340362/169834605-26b45735-2775-428f-95ac-57d5ea4ecdd2.png">
 
 -----------------------------------------------------------------------------
 
