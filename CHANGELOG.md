@@ -18,6 +18,6 @@
 
 * added video demo for snackbar
 
-## 0.0.5.1 - 2022-05-23
+## 0.0.6 - 2022-05-23
 
 * added textfield and buttons
