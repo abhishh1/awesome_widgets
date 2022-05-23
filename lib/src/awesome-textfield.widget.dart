@@ -22,8 +22,8 @@ class AwesomeTextfield {
     int? maxLines,
   }) {
     return Container(
-        width: width ?? 100,
-        height: height ?? 80,
+        width: width ?? 400,
+        height: height ?? 100,
         child: TextField(
           minLines: minLines,
           maxLines: maxLines,
